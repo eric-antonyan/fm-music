@@ -1,0 +1,264 @@
+::selection {
+    background: #ff416c;
+    color: #fff;
+    transition: 0.5s !important;
+}
+
+.main {
+    position: relative;
+    min-height: 100%;
+    transition: 0.5s !important;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 40px;
+    box-shadow: 0 0 300px rgba(0, 0, 0, 0.6);
+    transition: 0.6s;
+}
+
+.signUp,
+.signIn {
+    position: absolute;
+    top: 0;
+    transition: 0.5s !important;
+    left: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signUp {
+    width: 50%;
+    transition: 0.5s !important;
+    opacity: 0;
+    z-index: 1;
+}
+
+.signIn {
+    width: 50%;
+    z-index: 2;
+    transition: 0.5s !important;
+}
+
+.formData {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    transition: 0.5s !important;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+    gap: 10px;
+}
+
+.formData h1 {
+    font-weight: bold !important;
+    margin: 0;
+    font-size: 40px;
+    transition: 0.5s !important;
+}
+
+.formData p {
+    font-size: 14px;
+    font-weight: 500 !important;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 15px 0 20px;
+    transition: 0.5s !important;
+}
+
+.formData input {
+    background: #eee;
+    padding: 12px 15px;
+    margin: 8px 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: 0.5s !important;
+}
+
+.formData a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.5s !important;
+}
+
+.formData button {
+    color: #fff;
+    transition: 0.5s !important;
+    background: #ff4b2b;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 17px 55px;
+    margin: 20px;
+    border-radius: 50px;
+    border: 1px solid #ff4b2b;
+    outline: none;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.formData button:disabled {
+    background: #ff8a76;
+    border: 1px solid #ff8a76;
+    transition: 0.5s !important;
+    cursor: default;
+}
+
+.formButtonSignIn {
+    background: #ff228c !important;
+    color: #fff !important;
+    transition: 0.5s !important;
+}
+
+.signIn .formData h1 {
+    transition: 0.5s !important;
+    color: #ff228c !important;
+}
+
+.signUp .formData h1 {
+    color: #ff416c !important;
+    transition: 0.5s !important;
+}
+
+.signInButton,
+.signUpButton {
+    transition: 0.5s !important;
+    margin-top: 40px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    font-size: 14px;
+    border-radius: 50px;
+    padding: 17px 55px;
+    transition: 0.5s;
+}
+
+.signInButton:hover,
+.signUpButton:hover {
+    background: #fff;
+    color: #ff4b28;
+    transition: 0.5s !important;
+}
+
+.main.rightPanelActive .signUp {
+    transform: translateX(100%);
+    opacity: 1;
+    transition: 0.5s !important;
+    z-index: 5;
+}
+
+.main.rightPanelActive .signIn {
+    transform: translateX(100%);
+    transition: 0.5s !important;
+}
+
+.overlayContainer {
+    transition: 0.5s !important;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.main.rightPanelActive .overlayContainer {
+    transition: 0.5s !important;
+    transform: translateX(-100%);
+}
+
+.overlay {
+    position: relative;
+    color: #fff;
+    background: #ff416c;
+    transition: 0.5s !important;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    background: linear-gradient(to right, #ff4b28, #ff228c);
+}
+
+.main.rightPanelActive .overlay {
+    transition: 0.5s !important;
+    transform: translateX(50%);
+}
+
+.overlay h1 {
+    font-size: 50px !important;
+    font-weight: bold !important;
+    transition: 0.5s !important;
+}
+
+.overlayLeft,
+.overlayRight {
+    transition: 0.5s !important;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlayLeft {
+    transform: translateX(-20%);
+    transition: 0.5s !important;
+}
+
+.overlayRight {
+    transition: 0.5s !important;
+    right: 0;
+    transform: translateX(0%);
+    pointer-events: all;
+}
+
+.main.rightPanelActive .overlayLeft {
+    transition: 0.5s !important;
+    transform: translateX(0);
+}
+
+.main.rightPanelActive .overlayRight {
+    transition: 0.5s !important;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateX(-20%);
+    pointer-events: none;
+    transition: 0.5s !important;
+}
+
+.socialContainer {
+    margin: 20px 0;
+    transition: 0.5s !important;
+}
+
+.socialContainer .social {
+    margin: 40px;
+    width: 40px;
+    transition: 0.5s !important;
+    height: 40px;
+    margin: 0px 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
